@@ -1,0 +1,49 @@
+Question: You have been tasked with reviewing and updating this program. What steps would you take to identify any issues in the code?
+Your Response: I would check the variable declarations for accuracy, check all input and output statements, verify all calculations and formulas, examine loop and conditional logic, and check for syntax errors and typos. 
+
+Question: What actions could the developer have taken to minimize the number of errors?
+Your Response: The developer could have planned the program with clear pseudocode, used consistent variable names, tested each part of the code individually and made it modular, documented logic, and carefully checked over everything. 
+
+Debugging Exercise:
+
+// This pseudocode is intended to determine whether students have
+// passed or failed a course; student needs to average 60 or
+// more on two tests. 
+// Corrections made:
+// 1. Added missing first "input firstTest" after the initial prompt.
+// 2. Added parentheses around (firstTest + secondTest) for clarity.
+// 3. Added optional friendly message when exiting.
+// 4. Proper indentation and spacing for readability. 
+
+start
+	Declarations
+		num firstTest
+		num secondTest
+		num average
+		num PASSING = 60
+		
+	output "Enter first score or 0 to quit"
+	input firstTest
+	
+	while firstTest <> 0
+		output "Enter second score"
+		input secondTest
+		
+		average = (firstTest + secondTest) / 2
+		
+		output "Average is ", average
+		
+		if average >= PASSING then
+			output "Pass"
+		else
+			output "Fail"
+		endif
+		
+		output "Enter first score or 0 to quit"
+		input firstTest
+	endwhile
+	
+	output "All done!"
+stop
+
+

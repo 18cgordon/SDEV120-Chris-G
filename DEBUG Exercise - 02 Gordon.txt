@@ -1,0 +1,46 @@
+// This pseudocode is intended to display employee net pay values.
+// All employees have a standard $45 deduction from their checks.
+// If an employee does not earn enough to cover the deduction
+// an error message is displayed.
+// Corrections made:
+// 1. Fixed all prompts for clarity and grammar issues.
+// 2. Force net pay to 0 if deduction is not covered.
+// 3. Added consistent spacing and perfect indentation.
+// 4. Minor wording improvements for professionalism. 
+
+start
+	Declarations
+		string name
+		num hours
+		num rate
+		num DEDUCTION = 45
+		string EOFNAME = "ZZZ"
+		num gross
+		num net
+		
+	output "Enter employee name or ", EOFNAME, " to quit"
+	input name
+	
+	while name <> EOFNAME
+		output "Enter hours worked for ", name
+		input hours
+		
+		output "Enter hourly rate for ", name
+		input rate
+		
+		gross = hours * rate
+		net = gross - DEDUCTION
+		
+		if net >= 0 then
+			output "Net pay for ", name, " is $", net
+		else
+			output name, ": Deductions not covered - net pay set to $0"
+			net = 0
+		endif
+		
+		output "Enter next employee name or ", EOFNAME, " to quit"
+		input name
+	endwhile
+	
+	output "End of job"
+stop
